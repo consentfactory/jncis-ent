@@ -1,2 +1,2 @@
-# jncis-ent
-Notes for JNCIS-ENT studying.
+# JNCIS-ENT
+Notes and lab documentation for JNCIS-ENT studying. 
