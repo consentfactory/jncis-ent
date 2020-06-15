@@ -1,12 +1,30 @@
-# JNCIS-ENT
-Notes and lab documentation for JNCIS-ENT studying. 
+# JNCIS-ENT (JN0-348) Study Guide
+
+This is studying resource for myself that I'm making public and is a work-in-progress. This is created with the intent archiving information for myself and sharing the resources I've put together for others to use.
+
+**Table of Contents**
+- [Exam Information](#exam-information)
+  * [Exam Details](#exam-details)
+  * [Exam Objectives](#exam-objectives)
+    + [Layer 2 Switching or VLANs](#layer-2-switching-or-vlans)
+    + [Spanning Tree](#spanning-tree)
+    + [Layer 2 Security](#layer-2-security)
+    + [Protocol Independent Routing](#protocol-independent-routing)
+    + [OSPF](#ospf)
+    + [IS-IS](#is-is)
+    + [BGP](#bgp)
+    + [Tunnels](#tunnels)
+    + [High Availability](#high-availability)
+  * [Resources](#resources)
+    + [Books](#books)
+    + [PDFs](#pdfs)
+    + [Websites](#websites)
 
 ## Exam Information
 
-Updated: 2020.06.14
+[Exam Information Website](https://www.juniper.net/us/en/training/certification/certification-tracks/ent-routing-switching-track?tab=jncis-enterprise)
 
-Taken from:
-https://www.juniper.net/us/en/training/certification/certification-tracks/ent-routing-switching-track?tab=jncis-enterprise
+Updated as of 2020.06.14.
 
 ### Exam Details
 
@@ -160,3 +178,21 @@ This list provides a general view of the skill set required to successfully comp
     * VRRP
     * ISSU
     * Troubleshooting tools (e.g., trace options, show commands, logging)
+
+### Resources
+
+The following is a *general* list of resources that are used in my studying for JNCIS-ENT. More specific materials will be noted in each study section.
+
+#### Books
+
+* [Junos Enterprise Routing](https://www.amazon.com/Junos-Enterprise-Routing-Practical-Certification-ebook/dp/B005EI85GE)
+* [Junos Enterprise Switching](https://www.amazon.com/JUNOS-Enterprise-Switching-Practical-Certification-ebook/dp/B0043D2E90/146-1054384-4832765)
+
+#### PDFs
+
+* [JNCIS-ENT-Routing](study_guides/JNCIS-ENT-Routing_2012-12-20_2015-05-22.pdf) - Older guide but still plenty of good material.
+* [JNCIS-ENT-Switching](study_guides/JNCIS-ENT-Switching_2012-12-27_2015-01-28.pdf) - Older guide but still plenty of good material.
+
+#### Websites
+
+* [Juniper Genius JNCIS-ENT](https://cloud.contentraven.com/junosgenius/learningpath-detail/1630/3/1846/2) - **Free** resource, but requires registration.  
