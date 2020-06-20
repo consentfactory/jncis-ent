@@ -93,7 +93,7 @@
     + Show Aggregate Route Configuration
     + Show Aggregate Routes
       
-      ![show route 172.29.0.0/22 exact detail](images/protocol_independent/show_aggregate_routes.png)
+      ![show route 172.29.0.0/22 exact detail](../images/protocol_independent/show_aggregate_routes.png)
   * Generated Routes
     ```
     [edit routing-options]
