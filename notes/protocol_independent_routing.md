@@ -90,19 +90,57 @@
         }
     ```
   * Aggregate Routes
-    + Show Aggregate Route Configuration
+    + Aggregate Route Configuration
+        ```
+        [edit routing-options]
+        user@R1# show
+        aggregate {
+            # Defaults here propagate down to other aggregate routes if not specified
+            defaults {
+                community 1:888;
+            }
+            # Default action here will be rejected and an ICMP unreachable sent if a packet is sent with a destination address within the /22 subnet of 172.29.0.0.
+            route 172.29.0.0/22;
+            # Instead of rejecting with ICMP message, this route will quietly discard anything sent to a destination address within the /16 subnet of 172.25.0.0.
+            route 172.25.0.0/16 {
+                community 1:999;
+                discard;
+            }
+        }
+        ```
     + Show Aggregate Routes
       
       ![show route 172.29.0.0/22 exact detail](../images/protocol_independent/show_aggregate_routes.png)
   * Generated Routes
-    ```
-    [edit routing-options]
-    user@R1# show
-    generate {
-        defaults {
-            preference 130;
+    + Generated Routes Configuration 
+        ```
+        [edit routing-options]
+        user@R1# show
+        generate {
+            defaults {
+                preference 130;
+            }
+            # When this is configured, the router will look for any non-local/non-direct route within this generated route (in this case, every route because it's 0/0), and will generate a next-hop from the route with the lowest preference value, and in the event of preference value tie, the lowest route prefix (or route with lowest IP address). 
+            route 0.0.0.0/0;
         }
-        # When this is configured, the router will look for any non-local/non-direct route within this generated route (in this case, every route because it's 0/0), and will generate a next-hop from the route with the lowest preference value, and in the event of preference value tie, the lowest route prefix (or route with lowest IP address). 
-        route 0.0.0.0/0;
-    }
-    ```
+        ```
+    + Show Generate Routes
+        ```
+        user@R1> show route 0/0 exact detail
+
+        inet.0: 14 destinations, 14 routes (14 active, 0 holddown, 0 hidden)
+        0.0.0.0/0 (1 entry, 1 announced)
+            *Aggregate Preference: 130
+                Next hop type: Router, Next hop index: 546
+                Next-hop reference count: 4
+                Next hop: 172.30.25.1 via ge-0/0/1.100, selected
+                State: <Active Int Ext>
+                Local AS: 65400
+                Age: 1:03:46
+                Task: Aggregate
+                Announcement bits (2): 0-KRT 2-OSPF
+                AS path: I
+                    Flags: Generate Depth: 0 Active
+                Contributing Routes (1):
+                    10.0.0.0/16 proto BGP
+        ```
