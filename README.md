@@ -1,6 +1,8 @@
 # JNCIS-ENT (JN0-348) Study Guide
 
-This is studying resource for myself that I'm making public and is a work-in-progress. This is created with the intent archiving information for myself and sharing the resources I've put together for others to use.
+This is a studying resource for myself that I'm making public and *is a work-in-progress*. In the past, my studying for past certifications took an approach that crammed the material in a short window; for JNCIS-ENT, and others, I wanted a better framework that I felt could last longer and be more easily referenced. Also, I love typing markdown for some reason.
+
+Thus, this project is created with the intent archiving information for myself and sharing the resources I've put together for others to use. 
 
 **Table of Contents**
 - [Exam Information](#exam-information)
@@ -195,4 +197,9 @@ The following is a *general* list of resources that are used in my studying for 
 
 #### Websites
 
-* [Juniper Genius JNCIS-ENT](https://cloud.contentraven.com/junosgenius/learningpath-detail/1630/3/1846/2) - **Free** resource, but requires registration.  
+* [Juniper Genius JNCIS-ENT](https://cloud.contentraven.com/junosgenius/learningpath-detail/1630/3/1846/2) - **Free** resource, but requires registration.
+
+#### Lab Work
+
+* [Juniper VLabs](https://jlabs.juniper.net/vlabs/portal/index.page) - Requires registration. Free resource for trying out Juniper labs and scenarios.
+* [EVE-NG](https://www.eve-ng.net/) - Home virtual environment you can create. Best approach is build it on standalone hardware, particularly if you're doing Juniper lab work due to the resource demands of the virtualized Juniper images. 
