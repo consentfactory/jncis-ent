@@ -109,7 +109,6 @@
         }
         ```
     + Show Aggregate Routes
-      
       ![show route 172.29.0.0/22 exact detail](../images/protocol_independent/show_aggregate_routes.png)
   * Generated Routes
     + Generated Routes Configuration 
@@ -120,7 +119,14 @@
             defaults {
                 preference 130;
             }
-            # When this is configured, the router will look for any non-local/non-direct route within this generated route (in this case, every route because it's 0/0), and will generate a next-hop from the route with the lowest preference value, and in the event of preference value tie, the lowest route prefix (or route with lowest IP address). 
+            # When this is configured, the router will
+            # look for any non-local/non-direct route
+            # within this generated route (in this case, 
+            # every route because it's 0/0), and will
+            # generate a next-hop from the route with the 
+            # lowest preference value, and in the event of
+            # preference value tie, the lowest route
+            # prefix (or route with lowest IP address). 
             route 0.0.0.0/0;
         }
         ```
